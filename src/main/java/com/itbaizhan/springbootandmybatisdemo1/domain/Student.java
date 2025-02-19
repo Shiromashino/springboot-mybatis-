@@ -24,6 +24,7 @@ public class Student extends Model<Student> {
     private Integer version;
 
     @TableLogic
+    @TableField(fill = FieldFill.INSERT)
     private Integer deleted;
 }
 

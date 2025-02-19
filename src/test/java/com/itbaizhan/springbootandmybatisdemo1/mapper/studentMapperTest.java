@@ -141,4 +141,10 @@ public class studentMapperTest {
         long total = page.getTotal();
         System.out.println(current+","+size+","+total);
     }
+
+    @Test
+    public void testadd(){
+        Student student = new Student();
+        student.insert();
+    }
 }
