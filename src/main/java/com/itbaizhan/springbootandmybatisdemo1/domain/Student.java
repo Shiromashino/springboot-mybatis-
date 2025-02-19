@@ -1,9 +1,6 @@
 package com.itbaizhan.springbootandmybatisdemo1.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,6 +19,12 @@ public class Student extends Model<Student> {
     private String name;
     private String sex;
     private String address;
+
+    @Version
+    private Integer version;
+
+    @TableLogic
+    private Integer deleted;
 }
 
 //实体类转表名：

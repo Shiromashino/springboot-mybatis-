@@ -91,15 +91,16 @@ public class studentMapperTest {
 
     @Test
     public void ArAdd(){
-        Student student = new Student(6,"邮箱","女","千年");
+        Student student = new Student(6,"邮箱","女","千年",1,0);
         student.insert();
     }
 
     @Test
     public void ArUpdate(){
-        Student student = new Student(7,"莉音","女","千年");
+        Student student = new Student();
         student.setName("王小桃");
         student.setId(6);
+        student.setVersion(2);
         student.updateById();
 
     }
@@ -107,7 +108,8 @@ public class studentMapperTest {
     @Test
     public void ArDel(){
         Student student = new Student();
-        student.setId(6);
+        student.setId(4);
+        student.setVersion(0);
         student.deleteById();
     }
 
